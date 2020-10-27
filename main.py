@@ -20,11 +20,14 @@ def login():
 
     if html.__contains__("該頁面必須在登錄後才能訪問"):
         print("登录失败")
+        exit(1)
     else:
         if html.__contains__(username):
             print("登录成功")
+            exit(0)
         else:
             print("登录失败")
+            exit(1)
 
 
 if __name__ == "__main__":
